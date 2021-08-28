@@ -1,11 +1,9 @@
 package com.ouyanghaixiong;
 
-import com.sun.xml.internal.ws.api.server.AbstractServerAsyncTransport;
-import oracle.jrockit.jfr.ActiveSettingEvent;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * @author ouyanghaixiong@forchange.tech
