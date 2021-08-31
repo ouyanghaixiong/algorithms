@@ -10,12 +10,12 @@ import static org.junit.Assert.assertEquals;
  * @date 2021/5/12
  * @desc
  */
-public class ArrayListTest {
-    private ArrayList list;
+public class MyArrayListTest {
+    private MyArrayList list;
 
     @Before
     public void setUp() throws Exception {
-        list = new ArrayList(3);
+        list = new MyArrayList(3);
     }
 
     @Test(expected = IndexOutOfBoundsException.class)

@@ -13,7 +13,7 @@ public class LinkedListTest {
 
     @Test
     public void insert() {
-        LinkedList list = new LinkedList();
+        MyLinkedList list = new MyLinkedList();
         list.insert(0, 0);
         list.insert(1, 1);
         list.insert(2, 2);
@@ -22,7 +22,7 @@ public class LinkedListTest {
 
     @Test
     public void add() {
-        LinkedList list = new LinkedList();
+        MyLinkedList list = new MyLinkedList();
         assertEquals(0, list.size);
         list.add(0);
         list.add(1);
@@ -33,7 +33,7 @@ public class LinkedListTest {
 
     @Test
     public void delete() {
-        LinkedList list = new LinkedList();
+        MyLinkedList list = new MyLinkedList();
         list.add(0);
         list.add(1);
         list.add(2);
@@ -44,7 +44,7 @@ public class LinkedListTest {
 
     @Test
     public void pop() {
-        LinkedList list = new LinkedList();
+        MyLinkedList list = new MyLinkedList();
         list.add(0);
         list.add(1);
         list.add(2);
@@ -55,7 +55,7 @@ public class LinkedListTest {
 
     @Test
     public void update() {
-        LinkedList list = new LinkedList();
+        MyLinkedList list = new MyLinkedList();
         list.add(0);
         list.add(1);
         list.add(2);
@@ -65,7 +65,7 @@ public class LinkedListTest {
 
     @Test
     public void search() {
-        LinkedList list = new LinkedList();
+        MyLinkedList list = new MyLinkedList();
         list.add(0);
         list.add(1);
         list.add(2);

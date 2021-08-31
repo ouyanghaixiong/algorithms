@@ -5,12 +5,12 @@ package com.ouyanghaixiong;
  * @date 2021/5/12
  * @desc
  */
-public class ArrayList {
+public class MyArrayList {
     private int[] arr;
     private int capacity;
     private int size;
 
-    public ArrayList(int capacity) {
+    public MyArrayList(int capacity) {
         this.arr = new int[capacity];
         this.capacity = capacity;
         this.size = 0;

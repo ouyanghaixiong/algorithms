@@ -5,7 +5,7 @@ package com.ouyanghaixiong;
  * @date 2021/8/28
  * @desc
  */
-public class LinkedList {
+public class MyLinkedList {
     private static class Node {
         public Integer data;
         public Node prev;
@@ -20,7 +20,7 @@ public class LinkedList {
     private Node tail;
     public int size;
 
-    public LinkedList() {
+    public MyLinkedList() {
         head = new Node(null);
         tail = new Node(null);
         head.next = tail;

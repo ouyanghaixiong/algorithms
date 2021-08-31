@@ -13,7 +13,7 @@ public class CyclicQueueTest {
 
     @Test
     public void enQueue() {
-        CyclicQueue queue = new CyclicQueue(10);
+        MyCyclicQueue queue = new MyCyclicQueue(10);
         queue.enQueue(0);
         queue.enQueue(1);
         queue.enQueue(2);
@@ -23,7 +23,7 @@ public class CyclicQueueTest {
 
     @Test
     public void deQueue() {
-        CyclicQueue queue = new CyclicQueue(10);
+        MyCyclicQueue queue = new MyCyclicQueue(10);
         queue.enQueue(0);
         queue.enQueue(1);
         queue.enQueue(2);

@@ -5,14 +5,14 @@ package com.ouyanghaixiong;
  * @date 2021/8/29
  * @desc
  */
-public class CyclicQueue {
+public class MyCyclicQueue {
     private final int[] arr;
     private final int capacity;
     public int size;
     private int front;
     private int rear;
 
-    public CyclicQueue(int capacity) {
+    public MyCyclicQueue(int capacity) {
         this.capacity = capacity;
         this.arr = new int[capacity];
         this.size = 0;
