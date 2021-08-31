@@ -1,16 +1,13 @@
 package com.ouyanghaixiong;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * @author ouyanghaixiong@forchange.tech
  * @date 2021/8/31
  * @desc
  */
-public class NonRecursivePreOrder {
+public class BinarySearchTree {
     public static class TreeNode {
         public int data;
         public TreeNode left;
@@ -144,6 +141,24 @@ public class NonRecursivePreOrder {
                 continue;
             }
             cur = null;
+        }
+
+        return list;
+    }
+
+    public List<Integer> bfs(TreeNode root) {
+        ArrayList<Integer> list = new ArrayList<>();
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        while (!queue.isEmpty()) {
+            TreeNode cur = queue.poll();
+            list.add(cur.data);
+            if (cur.left != null) {
+                queue.add(cur.left);
+            }
+            if (cur.right != null) {
+                queue.add(cur.right);
+            }
         }
 
         return list;
