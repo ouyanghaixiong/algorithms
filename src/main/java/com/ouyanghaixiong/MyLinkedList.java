@@ -16,8 +16,8 @@ public class MyLinkedList {
         }
     }
 
-    private Node head;
-    private Node tail;
+    private final Node head;
+    private final Node tail;
     public int size;
 
     public MyLinkedList() {
