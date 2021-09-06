@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
  * @date 2021/8/28
  * @desc
  */
-public class LinkedListTest {
+public class MyLinkedListTest {
 
     @Test
     public void insert() {

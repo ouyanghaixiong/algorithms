@@ -29,12 +29,6 @@ public class CyclicLinkedList {
         tail.next = new Node(data);
         tail = tail.next;
         size++;
-    }
-
-    public void addCyclicNode(int data) {
-        tail.next = new Node(data);
-        tail = tail.next;
-        size++;
         tail.next = head;
     }
 
@@ -42,23 +36,23 @@ public class CyclicLinkedList {
         Node fast = head;
         Node slow = head;
 
-        boolean melt = false;
-        int count = 0;
+        boolean met = false;
         while (fast != null && fast.next != null) {
             fast = fast.next.next;
             slow = slow.next;
-            count++;
             if (fast == slow) {
-                melt = true;
+                met = true;
                 break;
             }
         }
 
-        if (melt) {
-            for (int i = 0; i < count; i++) {
+        if (met) {
+            fast = head;
+            while (fast != slow) {
+                fast = fast.next;
                 slow = slow.next;
             }
-            return slow.data;
+            return fast.data;
         }
 
         return -1;
@@ -77,5 +71,22 @@ public class CyclicLinkedList {
         }
 
         return false;
+    }
+
+    public int getCycleLength() {
+        Node fast = head;
+        Node slow = head;
+
+        int step = 0;
+        while (fast != null && fast.next != null) {
+            fast = fast.next.next;
+            slow = slow.next;
+            step++;
+            if (fast == slow) {
+                return step;
+            }
+        }
+
+        return 0;
     }
 }

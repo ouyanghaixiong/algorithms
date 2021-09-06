@@ -17,7 +17,7 @@ public class CyclicLinkedListTest {
         list.add(1);
         list.add(2);
         list.add(3);
-        list.addCyclicNode(4);
+        list.add(4);
         assertEquals(0, list.getCycleEntry());
     }
 
@@ -27,13 +27,13 @@ public class CyclicLinkedListTest {
         list1.add(1);
         list1.add(2);
         list1.add(3);
-        assertFalse(list1.isCyclic());
+        list1.add(4);
+        assertTrue(list1.isCyclic());
 
         CyclicLinkedList list2 = new CyclicLinkedList(0);
         list2.add(1);
         list2.add(2);
         list2.add(3);
-        list2.addCyclicNode(4);
         assertTrue(list2.isCyclic());
     }
 
@@ -44,5 +44,14 @@ public class CyclicLinkedListTest {
         list.add(2);
         list.add(3);
         assertEquals(4, list.size);
+    }
+
+    @Test
+    public void getCycleLength() {
+        CyclicLinkedList list = new CyclicLinkedList(0);
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        assertEquals(4, list.getCycleLength());
     }
 }
