@@ -17,12 +17,10 @@ public class SelectionSort {
 
         for (int i = 0; i < n - 1; i++) {
             // 找最小值
-            int min = arr[i];
             int minIndex = i;
             int j;
             for (j = i; j < n; j++) {
-                if (arr[j] < min) {
-                    min = arr[j];
+                if (arr[j] < arr[minIndex]) {
                     minIndex = j;
                 }
             }
