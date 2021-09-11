@@ -21,10 +21,12 @@ public class InsertionSort {
             while (j >= 1) {
                 if (tmp < arr[j - 1]) {
                     arr[j] = arr[j - 1];
-                    arr[j - 1] = tmp;
+                } else {
+                    break;
                 }
                 j--;
             }
+            arr[j] = tmp;
         }
     }
 }
