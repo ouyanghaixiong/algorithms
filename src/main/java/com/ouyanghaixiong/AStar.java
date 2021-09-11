@@ -104,6 +104,7 @@ public class AStar {
 
     public static void printPath() {
         Grid dest = getDestination();
+        assert dest != null;
         helper(dest);
     }
 
