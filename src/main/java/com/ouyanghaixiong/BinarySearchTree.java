@@ -163,4 +163,81 @@ public class BinarySearchTree {
 
         return list;
     }
+
+    public void add(TreeNode root, int value) {
+        // base case
+        if (root.left == null && root.right == null) {
+            if (value < root.data) {
+                root.left = new TreeNode(value);
+            } else {
+                root.right = new TreeNode(value);
+            }
+            return;
+        } else if (root.right == null && value >= root.data) {
+            root.right = new TreeNode(value);
+            return;
+        } else if (root.left == null && value < root.data) {
+            root.left = new TreeNode(value);
+            return;
+        }
+
+        if (value < root.data) {
+            add(root.left, value);
+        } else {
+            add(root.right, value);
+        }
+    }
+
+    /**
+     * 删除指定节点并返回根节点
+     * @param root
+     * @param value
+     * @return
+     */
+    public TreeNode remove(TreeNode root, int value) {
+        if (root.data == value) {
+            if (root.left == null && root.right == null) {
+                return null;
+            }
+            if (root.left != null && root.right != null) {
+                TreeNode cur = root.right;
+                while (cur.left != null) {
+                    cur = cur.left;
+                }
+                root.data = cur.data;
+                remove(cur, cur.data);
+                return root;
+            }
+            if (root.left != null) {
+                return root.left;
+            }
+            return root.right;
+        }
+
+        if (value < root.data) {
+            root.left = remove(root.left, value);
+        } else {
+            root.right = remove(root.right, value);
+        }
+
+        return root;
+    }
+
+    /**
+     * 找到并返回指定节点
+     * @param root
+     * @param value
+     * @return
+     */
+    public TreeNode get(TreeNode root, int value) {
+        if (root == null) return null;
+
+        if (value == root.data) {
+            return root;
+        } else if (value < root.data) {
+            return get(root.left, value);
+        } else {
+            return get(root.right, value);
+        }
+    }
 }
